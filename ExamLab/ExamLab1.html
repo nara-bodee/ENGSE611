@@ -5,36 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <table border="1" align="center" width="30%" aria-colspan="4">
+
+<body bgcolor="EEEEEE">
+    <table border="0" align="center" width="30%" aria-colspan="0" cellpadding="10" cellspacing="0" bgcolor="white">
             <tr>
                 <td align="left" colspan="3">
                     <strong>สมัคร</strong><br>
-                    <p><font face="Tahoma" size="2"color="606770">ง่ายและเร็ว</font></p>
+                    <font face="Tahoma" size="2"color="606770">ง่ายและเร็ว</font>
+                    <hr>
                 </td>
-                <td align="right" colspan="1">
-                    <button type="Exit" style="width: 100%;">X</button>
+                <td>
+                    <button type="Exit" style="width: 10%;">X</button>
                 </td>
             </tr>
                 <form>
                         <tr>
-                            <td align="left" colspan="2"><input type="Fname" placeholder="ชื่อ"></td>
-                            <td align="right" colspan="2"><input type="Lname" placeholder="นามสกุล"></td>
+                            <td colspan="1"><input type="Fname" placeholder="ชื่อ"></td>
+                            <td colspan="1"><input type="Lname" placeholder="นามสกุล"></td>
                         </tr>
                         <tr>
-                            <td align="left" colspan="4"><input type="Email,Telephon" placeholder="หมายเลขโทรศัพท์มือถือหรืออีเมล" style="width: 80%;"></td>
+                            <td colspan="4"><input type="Email,Telephon" placeholder="หมายเลขโทรศัพท์มือถือหรืออีเมล" style="width: 80%;"></td>
                         </tr>
 
                         <tr>
-                            <td align="left" colspan="4"><input type="Password" placeholder="รหัสผ่าน" style="width: 80%;"></td>
+                            <td colspan="4"><input type="Password" placeholder="รหัสผ่าน" style="width: 80%;"></td>
                         </tr>
                         <tr>
-                            <td align="left" colspan="4">
+                            <td colspan="4">
                                 <label><font face="Tahoma" size="2"color="606770">วันเกิด</font></label>
                             </td>
                         </tr>
                         <tr>
-                            <td align="left" colspan="4">
+                            <td colspan="4">
                                 <select>
                                     <option value="day">วัน</option>
                                     <option value="1">1</option>
@@ -116,22 +118,54 @@
                             </td>
                         </tr>
                         <tr>
-                            <td align="left" colspan="4"><label><font face="Tahoma" size="2"color="606770">เพศ</font></label>
+                            <td colspan="4"><label><font face="Tahoma" size="2"color="606770">เพศ</font></label></td>
                         </tr>
                         <tr>
-                            <td align="left" colspan="4">
-                                <table border="1" width="50%" cellpadding="0" cellspacing="0" >
+                            <td colspan="4">
+                                <table border="0" width="100%" cellpadding="0" cellspacing="0">
                                     <tr>
-                                        <td>
-                                            <input type="radio" name="gender" value="female"> หญิง
+                                        <td width="40%">
+                                            <table width="100%" border="1" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                    <td>
+                                                        <table width="100%" border="0" cellspacing="1" cellpadding="5">
+                                                            <tr>
+                                                                <td align="left">หญิง</td>
+                                                                <td align="right"><input type="radio" name="gender" value="female"></td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
                                         </td>
-                                        <td>
-                                            <input type="radio" name="gender" value="male"> ชาย
-                                        </td>  
-                                    </tr>
+                                        <td width="5%"></td>
+                                        <td width="40%">
+                                            <table width="100%" border="1" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                    <td>
+                                                        <table width="100%" border="0" cellspacing="1" cellpadding="5">
+                                                            <tr>
+                                                                <td align="left">ชาย</td>
+                                                                <td align="right"><input type="radio" name="gender" value="male"></td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    <tr>
                                 </table>
                             </td>
                         </tr>
+                        <tr> 
+                            <td align="left" colspan="4">
+                            <p><font face="Tahoma" size="2"color="606770"> เมื่อคลิก สมัคร แสดงว่าคุณยอมรับข้อกำหนด นโยบายข้อมูล และ นโยบายคุกกี้ของเรา คุณอาจได้รับการแจ้งเตือนทาง SMS จากเรา และสามารถเลือกไม่รับได้ในภายหลัง</font></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" colspan="4" bgcolor="green">
+                                <button type="submit" style="width: 15%;">สมัคร</button>
+                            </td>
                 </form>
     </table>
 </body>
