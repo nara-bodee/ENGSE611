@@ -6,109 +6,133 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>สมัคร</h2>
-    <p><font face="Tahoma" size="2"color="606770">ง่ายและเร็ว</font></p>
+    <table border="1" align="center" width="30%" aria-colspan="4">
+            <tr>
+                <td align="left" colspan="3">
+                    <strong>สมัคร</strong><br>
+                    <p><font face="Tahoma" size="2"color="606770">ง่ายและเร็ว</font></p>
+                </td>
+                <td align="right" colspan="1">
+                    <button type="Exit" style="width: 100%;">X</button>
+                </td>
+            </tr>
+                <form>
+                        <tr>
+                            <td align="left" colspan="2"><input type="Fname" placeholder="ชื่อ"></td>
+                            <td align="right" colspan="2"><input type="Lname" placeholder="นามสกุล"></td>
+                        </tr>
+                        <tr>
+                            <td align="left" colspan="4"><input type="Email,Telephon" placeholder="หมายเลขโทรศัพท์มือถือหรืออีเมล" style="width: 80%;"></td>
+                        </tr>
 
-    <input type="Fname" placeholder="ชื่อ">
-    <input type="Lname" placeholder="นามสกุล">
-    <br><br>
-    <input type="Email,Telephon" placeholder="หมายเลขโทรศัพท์มือถือหรืออีเมล" style="width: 30%;">
-    <br><br>
-    <input type="Password" placeholder="รหัสผ่าน">
-    <br><br>
-    <label><font face="Tahoma" size="2"color="606770">วันเกิด</font></label>
-    <br>
-    <select name="date">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-        <option>6</option>
-        <option>7</option>
-        <option>8</option>
-        <option>9</option>
-        <option>10</option>
-        <option>11</option>
-        <option>12</option>
-        <option>13</option>
-        <option>14</option>
-        <option>15</option>
-        <option>16</option>
-        <option>17</option>
-        <option>18</option>
-        <option>19</option>
-        <option>20</option> 
-        <option>21</option>
-        <option>22</option>
-        <option>23</option>
-        <option>24</option>
-        <option>25</option>
-        <option>26</option>
-        <option>27</option>
-        <option>28</option>
-        <option>29</option>
-        <option>30</option>
-        <option>31</option>
-    </select>
-    <select> 
-        <option>ม.ค</option>
-        <option>ก.พ</option>
-        <option>มี.ค</option>
-        <option>เม.ย</option>
-        <option>พ.ค</option>
-        <option>มิ.ย</option>
-        <option>ก.ค</option>
-        <option>ส.ค</option>
-        <option>ก.ย</option>
-        <option>ต.ค</option>
-        <option>พ.ย</option>
-        <option>ธ.ค</option>
-    </select>
-    <select>
-        <option>2000</option>
-        <option>2001</option>
-        <option>2002</option>
-        <option>2003</option>
-        <option>2004</option>
-        <option>2005</option>
-        <option>2006</option>
-        <option>2007</option>
-        <option>2008</option>
-        <option>2009</option>
-        <option>2010</option>
-        <option>2011</option>
-        <option>2012</option>
-        <option>2013</option>
-        <option>2014</option>
-        <option>2015</option>
-        <option>2016</option>   
-        <option>2017</option>
-        <option>2018</option>
-        <option>2019</option>
-        <option>2020</option>
-        <option>2021</option>
-        <option>2022</option>
-        <option>2023</option>
-        <option>2024</option>
-        <option>2025</option>
-    </select>
-    <br><br>
-    <label><font face="Tahoma" size="2"color="606770">เพศ</font></label>
-    <br><br>
-    <table border="1" width="50%" cellpadding="0" cellspacing="0" >
-        <tr>
-            <td>
-                <input type="radio" name="gender" value="female"> หญิง
-            </td>
-            <td>
-                <input type="radio" name="gender" value="male"> ชาย
-            </td>  
-        </tr>
+                        <tr>
+                            <td align="left" colspan="4"><input type="Password" placeholder="รหัสผ่าน" style="width: 80%;"></td>
+                        </tr>
+                        <tr>
+                            <td align="left" colspan="4">
+                                <label><font face="Tahoma" size="2"color="606770">วันเกิด</font></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" colspan="4">
+                                <select>
+                                    <option value="day">วัน</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="29">29</option>
+                                    <option value="31">31</option>
+                                </select>
+                                <select>
+                                    <option value="month">เดือน</option>
+                                    <option value="1">ม.ค.</option>
+                                    <option value="2">ก.พ.</option>
+                                    <option value="3">มี.ค.</option>
+                                    <option value="4">เม.ย.</option>
+                                    <option value="5">พ.ค.</option>
+                                    <option value="6">มิ.ย.</option>
+                                    <option value="7">ก.ค.</option>
+                                    <option value="8">ส.ค.</option>
+                                    <option value="9">ก.ย.</option>
+                                    <option value="10">ต.ค.</option>
+                                    <option value="11">พ.ย.</option>
+                                    <option value="12">ธ.ค.</option>
+                                </select>
+                                <select>
+                                    <option value="year">ปี</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2019">2019</option> 
+                                    <option value="2018">2018</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2014">2014</option>
+                                    <option value="2013">2013</option>
+                                    <option value="2012">2012</option>
+                                    <option value="2011">2011</option>
+                                    <option value="2010">2010</option>
+                                    <option value="2009">2009</option>
+                                    <option value="2008">2008</option>
+                                    <option value="2007">2007</option>
+                                    <option value="2006">2006</option>
+                                    <option value="2005">2005</option>
+                                    <option value="2004">2004</option>
+                                    <option value="2003">2003</option>
+                                    <option value="2002">2002</option>
+                                    <option value="2001">2001</option>
+                                    <option value="2000">2000</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" colspan="4"><label><font face="Tahoma" size="2"color="606770">เพศ</font></label>
+                        </tr>
+                        <tr>
+                            <td align="left" colspan="4">
+                                <table border="1" width="50%" cellpadding="0" cellspacing="0" >
+                                    <tr>
+                                        <td>
+                                            <input type="radio" name="gender" value="female"> หญิง
+                                        </td>
+                                        <td>
+                                            <input type="radio" name="gender" value="male"> ชาย
+                                        </td>  
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                </form>
     </table>
-    <br>
-    <p><font face="Tahoma" size="2"color="606770"> เมื่อคลิก สมัคร แสดงว่าคุณยอมรับข้อกำหนด นโยบายข้อมูล และ นโยบายคุกกี้ของเรา คุณอาจได้รับการแจ้งเตือนทาง SMS จากเราและสามารถเลือกไม่รับได้ในภายหลัง</font></p>
-<br>
-   <button type="submit" >สมัคร</button>
 </body>
 </html>
