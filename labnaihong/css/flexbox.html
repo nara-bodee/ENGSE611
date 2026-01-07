@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-boxX {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            background: #f0f0f0;
+            padding: 15px;
+            border: 2px solid #ccc;
+            height: 150px;
+        }
+        .itemX {
+            background: navy;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .stretch .itemX {
+            background: teal;
+        }
+        .flex-boxY {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background: #f0f0f0;
+            padding: 15px;
+            border: 2px solid #ccc;
+            height: 200px;
+        }
+        .itemY {
+            background: navy;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        .stretch .itemY {
+            background: teal;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h2>1) justify-content: center</h2>
+    <div class="flex-boxX" style="justify-content: center;">
+        <div class="itemX">1</div>
+        <div class="itemX">2</div>
+        <div class="itemX">3</div>
+    </div>
+    <h2>2) justify-content: space-between</h2>
+    <div class="flex-boxX" style="justify-content: space-between;">
+        <div class="itemX">1</div>
+        <div class="itemX">2</div>
+        <div class="itemX">3</div>
+    </div>
+    <h2>3) align-items: center</h2>
+    <div class="flex-boxX" style="align-items: center;">
+        <div class="itemX" style="height: 40px;">1</div>
+        <div class="itemX" style="height: 80px;">2</div>
+        <div class="itemX" style="height: 60px;">3</div>
+    </div>
+    <h2>4) align-items: stretch</h2>
+    <div class="flex-boxX stretch" style="align-items: stretch;">
+        <div class="itemX">A</div>
+        <div class="itemX">B</div>
+        <div class="itemX">C</div>
+    </div>
+    <h2>1} justify-content: center</h2>
+    <div class="flex-boxY" style="justify-content: center;">
+        <div class="itemY">1</div>
+        <div class="itemY">2</div>
+        <div class="itemY">3</div>
+    </div>
+    <h2>2} justify-content: space-between</h2>
+    <div class="flex-boxY" style="justify-content: space-between;">
+        <div class="itemY">A</div>
+        <div class="itemY">B</div>
+        <div class="itemY">C</div>
+    </div>
+    <h2>3} align-items: center</h2>
+    <div class="flex-boxY" style="align-items: center;">
+        <div class="itemY" style="width: 40px;">X</div>
+        <div class="itemY" style="width: 80px;">Y</div>
+        <div class="itemY" style="width: 60px;">Z</div>
+    </div>
+    <h2>4} align-items: stretch</h2>
+    <div class="flex-boxY stretch" style="align-items: stretch;">
+        <div class="itemY">One</div>
+        <div class="itemY">Two</div>
+        <div class="itemY">Three</div>
+    </div>
+</body>
+</html>
