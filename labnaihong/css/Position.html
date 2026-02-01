@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        height: 1200px;
+    }
+    .box {
+        width: 200px;
+        height: 80px;
+        background: #4da3ff;
+        padding: 10px;
+        margin-bottom: 20px;
+        color: white;
+        font-size: 18px;
+    }
+    .static-box {
+        position: static;
+        background: #6c8cff;
+    }
+    .relative-box {
+        position: relative;
+        top: 20px;
+        left: 20px;
+        background: #ff8c42;
+    }
+    .relative-parent {
+        position: relative;
+        width: 300px;
+        height: 150px;
+        background: #ddd;
+        margin-bottom: 40px;
+        border: 2px dashed gray;
+    }
+    .absolute-box {
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        background: #ff4444;
+    }
+    .fixed-box {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 150px;
+        background: #22bb33;
+    }
+</style>
+<body>
+    <div class="box static-box">
+        position: static <br>(Default)
+    </div>
+    <div class="box relative-box">
+        position: relative <br>(Offset from original position)
+    </div>
+    <div class="relative-parent">
+        <div class="box absolute-box">
+            position: absolute <br>(Positioned relative to nearest positioned ancestor)
+        </div>
+    </div>
+    <div class="box fixed-box">
+        position: fixed <br>(Fixed to viewport)
+    </div>
+</body>
+</html>
