@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre id="output">ผลลัพธ์จะแสดงที่นี่...</pre>
+
+<button onclick="runStringDemo()">Run Code</button>
+
+<script>
+    function runStringDemo() {
+        const out = [];
+
+        let text = 'JavaScript เจ๋งมาก';
+        let firstName = 'สมชาย';
+
+        // Template Literal: การแทรกตัวแปรลงในข้อความโดยใช้ backticks (`)
+        out.push(`สวัสดี ${firstName}!`);
+        console.log(`สวัสดี ${firstName}!`);
+
+        // String Methods: วิธีการต่างๆ ในการจัดการข้อความ
+        out.push("ความยาว: " + text.length); // นับจำนวนตัวอักษร
+        console.log("ความยาว:", text.length);
+
+        out.push("ตัวใหญ่: " + text.toUpperCase()); // เปลี่ยนเป็นตัวพิมพ์ใหญ่ (ถ้ามีภาษาอังกฤษ)
+        console.log("ตัวใหญ่:", text.toUpperCase());
+
+        out.push("ตัวเล็ก: " + text.toLowerCase()); // เปลี่ยนเป็นตัวพิมพ์เล็ก
+        console.log("ตัวเล็ก:", text.toLowerCase());
+
+        out.push('มี "Java"? ' + text.includes('Java')); // ตรวจสอบว่ามีคำที่ค้นหาไหม (คืนค่า true/false)
+        console.log('มี "Java"?', text.includes('Java'));
+
+        out.push('ตำแหน่ง "Script": ' + text.indexOf('Script')); // หาตำแหน่งเริ่มต้นของคำ
+        console.log('ตำแหน่ง "Script":', text.indexOf('Script'));
+
+        out.push("ตัดคำ (0-4): " + text.slice(0, 4)); // ตัดข้อความตามตำแหน่งที่ระบุ
+        console.log("ตัดคำ (0-4):", text.slice(0, 4));
+
+        out.push("แทนที่: " + text.replace('เจ๋ง', 'สุดยอด')); // แทนที่คำเก่าด้วยคำใหม่
+        console.log("แทนที่:", text.replace('เจ๋ง', 'สุดยอด'));
+
+        // แสดงผลบนหน้าเว็บผ่าน element ที่มี id="output"
+        document.getElementById("output").textContent = out.join("\n");
+
+        // แสดงผลใน Console (F12)
+        console.clear();
+        out.forEach(line => console.log("> " + line));
+    }
+</script>
+</body>
+</html>
