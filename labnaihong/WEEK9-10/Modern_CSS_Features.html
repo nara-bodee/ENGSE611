@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* ===============================
+        CSS Variables (Mobile First)
+        =============================== */
+        :root {
+            --padding: 16px;
+            --bg-color: #f4f6f8;
+            --card-bg: #ffffff;
+            --text-color: #1f2933;
+        }
+
+        /* เธเธฃเธฑเธเธเนเธฒเน€เธกเธทเนเธญเธเธญเนเธซเธเนเธเธถเนเธ */
+        @media (min-width: 768px) {
+            :root {
+                --padding: 32px;
+            }      
+        }
+
+        body {
+            margin: 0;
+            font-family: Tahoma, sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        /* ===============================
+        Container เนเธเน CSS Variable
+        =============================== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--padding);
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: var(--padding);
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* ===============================
+        Clamp เธชเธณเธซเธฃเธฑเธ Typography
+        =============================== */
+        h1 {
+            font-size: clamp(1.6rem, 4vw, 2.8rem);
+            margin-top: 0;
+        }
+
+        p {
+            font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="card">
+        <h1>Modern CSS Features</h1>
+        
+        <p>
+            เธ•เธฑเธงเธญเธขเนเธฒเธเธเธตเนเนเธชเธ”เธเธเธฒเธฃเนเธเน CSS Variables เนเธฅเธฐเธเธฑเธเธเนเธเธฑเธ clamp() 
+            เน€เธเธทเนเธญเธ—เธณ Responsive Design เนเธ”เธขเนเธกเนเธ•เนเธญเธเน€เธเธตเธขเธ Media Query เธเธณเธเธงเธเธกเธฒเธ
+        </p>
+        
+        <p>
+            เน€เธกเธทเนเธญเธเธขเธฒเธขเธซเธฃเธทเธญเธขเนเธญเธซเธเนเธฒเธเธญ เธเธฐเน€เธซเนเธเธงเนเธฒเธฃเธฐเธขเธฐเธเธญเธเนเธฅเธฐเธเธเธฒเธ”เธ•เธฑเธงเธญเธฑเธเธฉเธฃ
+            เธเธฃเธฑเธเน€เธเธฅเธตเนเธขเธเธญเธขเนเธฒเธเธญเธฑเธ•เนเธเธกเธฑเธ•เธดเนเธฅเธฐเธฅเธทเนเธเนเธซเธฅ
+        </p>
+    </div>
+</div>
+</body>
+</html>

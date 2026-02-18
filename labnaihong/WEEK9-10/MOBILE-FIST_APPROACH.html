@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Tahoma, sans-serif;
+            background: #f5f5f5;
+        }
+
+        header {
+            background: #2c3e50;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        nav a {
+            background: #34495e;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        main {
+            padding: 15px;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background: #ffffff;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+        @media (min-width:768px) {
+
+            header {
+                text-align: left;
+                padding: 20px;
+            }
+
+            nav {
+                flex-direction: row;
+            }
+
+            main {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+                padding: 20px;
+            }
+        }
+
+        @media (min-width:1024px) {
+            
+            body {
+                max-width: 1200px;
+                margin: auto;
+            }
+
+            header {
+                padding: 30px 40px;
+            }
+
+            main {
+                grid-template-columns: repeat(3,1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mobile First Approach</h1>
+        <p>เน€เธฃเธดเนเธกเธญเธญเธเนเธเธเธเธฒเธเธกเธทเธญเธ–เธทเธญ เนเธฅเนเธงเธเนเธญเธขเธเธขเธฒเธขเธชเธนเนเธเธญเนเธซเธเน</p>
+        <nav>
+            <a href="#">เธซเธเนเธฒเนเธฃเธ</a>
+            <a href="#">เน€เธเธตเนเธขเธงเธเธฑเธ</a>
+            <a href="#">เธเธ—เน€เธฃเธตเธขเธ</a>
+            <a href="#">เธ•เธดเธ”เธ•เนเธญ</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="card">
+            <h3>เนเธเธงเธเธดเธ” Mobile-First</h3>
+            <p>
+                เน€เธฃเธดเนเธกเธญเธญเธเนเธเธเนเธฅเธฐเน€เธเธตเธขเธเนเธเนเธ”เธชเธณเธซเธฃเธฑเธเธซเธเนเธฒเธเธญเธกเธทเธญเธ–เธทเธญเธเนเธญเธ
+                เธเธฒเธเธเธฑเนเธเธเธถเธเน€เธเธดเนเธกเน€เธเธทเนเธญเธเนเธเธชเธณเธซเธฃเธฑเธเธซเธเนเธฒเธเธญเธ—เธตเนเนเธซเธเนเธเธถเนเธ
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>เธเนเธญเธ”เธต</h3>
+            <ul>
+                <li>เน€เธงเนเธเนเธเธ•เนเนเธซเธฅเธ”เน€เธฃเนเธง</li>
+                <li>เน€เธซเธกเธฒเธฐเธเธฑเธเธเธนเนเนเธเนเธกเธทเธญเธ–เธทเธญ</li>
+                <li>เนเธเนเธ”เน€เธเนเธเธฃเธฐเน€เธเธตเธขเธ</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>เธเธฒเธฃเนเธเนเธเธฒเธเธเธฃเธดเธ</h3>
+            <p>
+                เนเธเนเธฃเนเธงเธกเธเธฑเธ Responsive Design
+                เนเธฅเธฐเน€เธเนเธเธกเธฒเธ•เธฃเธเธฒเธเนเธเธเธฒเธฃเธเธฑเธ’เธเธฒเน€เธงเนเธเนเธเธขเธธเธเธเธฑเธเธเธธเธเธฑเธ
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        เธฃเธฒเธขเธงเธดเธเธฒ ENGSE611 เธเธฒเธฃเธเธฑเธ’เธเธฒเน€เธงเนเธเธ”เนเธงเธขเน€เธ—เธเนเธฏเนเธฅเธขเธตเธชเธกเธฑเธขเนเธซเธกเน
+    </footer>
+</body>
+</html>
