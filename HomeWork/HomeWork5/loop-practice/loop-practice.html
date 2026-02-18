@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loop Practice</title>
+
+<style>
+  body { font-family: Arial, sans-serif; padding: 20px; }
+  button { padding: 10px 15px; cursor: pointer; }
+  #outputBox {
+    margin-top: 15px;
+    padding: 15px;
+    background: #111;
+    color: #00ff88;
+    border-radius: 10px;
+    white-space: pre-line;
+    min-width: 300px;
+  }
+</style>
+</head>
+
+<body>
+
+<h2>Loop Practice</h2>
+<button onclick="runLoop()">Run Code</button>
+
+<div id="outputBox">กด Run Code เพื่อเริ่ม</div>
+
+<script>
+
+function runLoop() {
+
+  let output = "";
+  let maxNumber = 20; // ข้อ 2: กำหนดค่า เช่น 15 หรือ 20
+
+  // ===============================
+  // แสดงตัวเลข 0 ถึง maxNumber
+  // ===============================
+  for (let i = 0; i <= maxNumber; i++) {
+
+    if (i % 2 === 0) {
+      output += i + " (คู่)\n";
+      console.log(i + " (คู่)");
+    } else {
+      output += i + " (คี่)\n";
+      console.log(i + " (คี่)");
+    }
+
+  }
+
+  output += "\n";
+
+  // ===============================
+  // นับทีละ 2 (0,2,4,...)
+  // ===============================
+  for (let i = 0; i <= maxNumber; i += 2) {
+    output += "นับทีละ 2: " + i + "\n";
+    console.log("นับทีละ 2:", i);
+  }
+
+  output += "\n";
+
+  // ===============================
+  // นับถอยหลังจาก 10 → 0
+  // ===============================
+  for (let i = 10; i >= 0; i--) {
+    output += "ถอยหลัง: " + i + "\n";
+    console.log("ถอยหลัง:", i);
+  }
+
+  // แสดงบนหน้าเว็บ
+  document.getElementById("outputBox").textContent = output;
+}
+
+</script>
+
+</body>
+</html>

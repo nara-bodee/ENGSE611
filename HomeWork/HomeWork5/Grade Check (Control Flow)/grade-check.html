@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>grade-check</title>
+
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    #output {
+      margin-top: 16px;
+      padding: 14px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      white-space: pre-line; /* ให้ขึ้นบรรทัดใหม่ตาม \n */
+      width: fit-content;
+      min-width: 320px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Grade Check (Control Flow)</h2>
+
+  <!-- แสดงผลในหน้าเว็บ เช่นใน div id="output" -->
+  <div id="output">ผลลัพธ์จะแสดงตรงนี้</div>
+
+  <script>
+    // =========================
+    //  ประกาศตัวแปร score (0-100)
+    // =========================
+    // (เริ่มจากการกำหนดค่าใดค่าหนึ่งก่อน)
+    let score = 98;
+
+    // =========================
+    // ฟังก์ชันตัดเกรดด้วย if / else if / else
+    // =========================
+    function getGrade(score) {
+      if (score >= 80) {
+        return "เกรด A";
+      } else if (score >= 70) {
+        return "เกรด B";
+      } else if (score >= 60) {
+        return "เกรด C";
+      } else if (score >= 50) {
+        return "เกรด D";
+      } else {
+        return "เกรด F";
+      }
+    }
+
+    // =========================
+    // ฟังก์ชันตรวจสอบ “ผ่าน / ไม่ผ่าน”
+    // =========================
+    function getPassFail(score) {
+      if (score >= 50) {
+        return "ผลสอบ: ผ่าน";
+      } else {
+        return "ผลสอบ: ไม่ผ่าน";
+      }
+    }
+
+    // =========================
+    // แสดงผลทั้งหน้าเว็บ และ Console
+    // =========================
+    function showResult(score) {
+      const gradeText = getGrade(score);
+      const passFailText = getPassFail(score);
+
+      // แสดงผลในหน้าเว็บ
+      document.getElementById("output").textContent =
+        "คะแนน: " + score + "\n" +
+        gradeText + "\n" +
+        passFailText;
+
+      // แสดงผลใน Console
+      console.log("คะแนน:", score);
+      console.log(gradeText);
+      console.log(passFailText);
+      console.log("--------------------");
+    }
+
+    // แสดงผลครั้งแรกจาก score ที่ตั้งไว้
+    showResult(score);
+
+    // =========================
+    // ทดลองเปลี่ยน score เป็น 45, 62, 79, 88
+    // =========================
+    const testScores = [45, 62, 79, 88];
+
+    // วนทดสอบทีละค่า และแสดงใน Console
+    for (let i = 0; i < testScores.length; i++) {
+      score = testScores[i];
+      showResult(score);
+    }
+  </script>
+</body>
+</html>

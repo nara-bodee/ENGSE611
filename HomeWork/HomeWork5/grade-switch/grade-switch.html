@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>grade-switch</title>
+
+<style>
+  body { font-family: Arial, sans-serif; padding: 20px; }
+  button { padding: 10px 15px; cursor: pointer; }
+  #outputBox {
+    margin-top: 15px;
+    padding: 15px;
+    background: #111;
+    color: #fff;
+    border-radius: 10px;
+    width: fit-content;
+    min-width: 320px;
+    white-space: pre-line;
+  }
+</style>
+</head>
+
+<body>
+
+<h2>การตรวจสอบเกรด (Switch Statement)</h2>
+<button onclick="runProgram()">Run Code</button>
+
+<div id="outputBox">กด Run Code เพื่อเริ่ม</div>
+
+<script>
+
+// ===========================
+// ฟังก์ชันสุ่มคะแนน 0-100
+// ===========================
+function randomScore() {
+  return Math.floor(Math.random() * 101);
+}
+
+// ===========================
+// ใช้ if/else ตัดเกรด
+// ===========================
+function getGrade(score) {
+  switch (true) {
+    case (score >= 80):
+      return "A";
+    case (score >= 70):
+      return "B";
+    case (score >= 60):
+      return "C";
+    case (score >= 50):
+      return "D";
+    default:
+      return "F";
+  }
+}
+
+// ===========================
+// ใช้ switch อธิบายเกรด
+// ===========================
+function getDescription(grade) {
+  let description;
+
+  switch (grade) {
+    case "A":
+      description = "ยอดเยี่ยมมาก";
+      break;
+    case "B":
+      description = "ดีมาก รักษามาตรฐานไว้";
+      break;
+    case "C":
+      description = "ผ่านเกณฑ์ระดับดี";
+      break;
+    case "D":
+      description = "พอใช้ แต่ควรพัฒนาเพิ่ม";
+      break;
+    case "F":
+      description = "ต้องลงทะเบียนเรียนใหม่";
+      break;
+    default:
+      description = "ไม่พบข้อมูล";
+  }
+
+  return description;
+}
+
+// ===========================
+// ตรวจสอบผ่าน/ไม่ผ่าน
+// ===========================
+function getPassFail(score) {
+  if (score >= 50) {
+    return "ผ่าน";
+  } else {
+    return "ไม่ผ่าน";
+  }
+}
+
+// ===========================
+// ฟังก์ชันหลักเมื่อกด Run
+// ===========================
+function runProgram() {
+
+  let score = randomScore();
+  let grade = getGrade(score);
+  let result = getPassFail(score);
+  let description = getDescription(grade);
+
+  let outputText =
+    "คะแนนที่สุ่มได้: " + score + "\n" +
+    "เกรด: " + grade + "\n" +
+    "ผลสอบ: " + result + "\n" +
+    "คำอธิบาย: " + description;
+
+  // แสดงบนหน้าเว็บ
+  document.getElementById("outputBox").textContent = outputText;
+
+  // แสดงใน Console
+  console.log("คะแนน:", score);
+  console.log("เกรด:", grade);
+  console.log("ผลสอบ:", result);
+  console.log("คำอธิบาย:", description);
+  console.log("----------------------");
+}
+
+</script>
+
+</body>
+</html>
