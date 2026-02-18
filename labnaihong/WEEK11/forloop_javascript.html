@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>เธเธฅเธฅเธฑเธเธเนเธเธเธซเธเนเธฒเน€เธงเนเธ:</h3>
+<div id="output">เธเธณเธฅเธฑเธเธฃเธฑเธ...</div>
+<p><strong>เธซเธกเธฒเธขเน€เธซเธ•เธธ:</strong> เธเธฅเธฅเธฑเธเธเนเธเธฐเธ–เธนเธเนเธชเธ”เธเนเธ <span style="color: red;">Console เธเธฃเธดเธ</span> เธ”เนเธงเธข</p>
+
+<script>
+    let output = "";
+
+    for (let i = 0, j = 100; i != j; i += 5, j -= 5) {
+        output += `i = ${i}, j = ${j}\n`;
+        console.log("i = %d, j = %d", i, j);  // เนเธชเธ”เธเธเธฅเนเธ Console เธเธฃเธดเธ
+    }
+
+    output += "Loop ended";
+    console.log("Loop ended");  // Console เธเธฃเธดเธ
+
+    document.getElementById("output").textContent = output;
+</script>
+</body>
+</html>

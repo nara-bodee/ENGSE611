@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="outputBox">เธเธฅเธฅเธฑเธเธเนเธเธฐเธเธฃเธฒเธเธเธ—เธตเนเธเธตเน...</div>
+
+<button onclick="runDemo()">Run Code</button>
+
+<script>
+    function runDemo() {
+        const output = [];
+
+        // เธเนเธฒเน€เธฃเธดเนเธกเธ•เนเธ
+        let score = 72;
+
+        // เน€เธเธทเนเธญเธเนเธ if / else
+        if (score >= 50) {
+            output.push("เธเธฅเธชเธญเธ: เธเนเธฒเธ");
+            console.log("เธเธฅเธชเธญเธ: เธเนเธฒเธ");
+        } else {
+            output.push("เธเธฅเธชเธญเธ: เนเธกเนเธเนเธฒเธ");
+            console.log("เธเธฅเธชเธญเธ: เนเธกเนเธเนเธฒเธ");
+        }
+
+        // เธงเธ loop 5 เธฃเธญเธ
+        for (let i = 0; i < 5; i++) {
+            output.push("เธฃเธญเธเธ—เธตเน: " + i);
+            console.log("เธฃเธญเธเธ—เธตเน:", i);
+        }
+
+        // เธญเธฑเธเน€เธ”เธ•เธเธฅเธฅเธฑเธเธเนเธเธเธซเธเนเธฒเน€เธงเนเธ
+        document.getElementById("outputBox").textContent = output.join("\n");
+    }
+</script>
+</body>
+</html>

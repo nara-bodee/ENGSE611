@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>For Loop Array</title>
+</head>
+<body>
+
+    <div id="output" style="white-space: pre; font-family: monospace;">เธเธณเธฅเธฑเธเนเธซเธฅเธ”...</div>
+
+    <script>
+        let out = "";
+
+        // Fruits
+        let fruits = ["Apple", "Banana", "Orange", "Grape", "Lemon"];
+        out += "List of fruits\n";
+        console.log("List of fruits");
+
+        for (let i = 0; i < fruits.length; i++) {
+            out += `${i + 1}. ${fruits[i]}\n`;
+            console.log("%d. %s", i + 1, fruits[i]);
+        }
+
+        out += "\nList of programming languages (reversed)\n";
+        console.log("List of programming languages (reversed)");
+
+        // Languages (reverse order)
+        let languages = ["GO", "JavaScript", "PHP", "Python", "Ruby"];
+        let count = 1;
+
+        for (let i = languages.length - 1; i >= 0; i--) {
+            out += `${count}. ${languages[i]}\n`;
+            console.log("%d. %s", count, languages[i]);
+            count++;
+        }
+
+        // 2. เธเธฃเธฃเธ—เธฑเธ”เน€เธเนเธฒเธเธฑเธเธซเธฒเธ—เธตเนเน€เธเธดเธ” Error
+        // เธ•เธญเธเธเธตเนเธกเธฑเธเธเธฐเธ—เธณเธเธฒเธเนเธ”เนเน€เธเธฃเธฒเธฐเธกเธต div id="output" เธญเธขเธนเนเธเนเธฒเธเธเธเนเธฅเนเธง
+        document.getElementById("output").textContent = out;
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre id="output">เธเธฅเธฅเธฑเธเธเนเธเธฐเนเธชเธ”เธเธ—เธตเนเธเธตเน...</pre>
+
+<button onclick="runStringDemo()">Run Code</button>
+
+<script>
+    function runStringDemo() {
+        const out = [];
+
+        let text = 'JavaScript เน€เธเนเธเธกเธฒเธ';
+        let firstName = 'เธชเธกเธเธฒเธข';
+
+        // Template Literal: เธเธฒเธฃเนเธ—เธฃเธเธ•เธฑเธงเนเธเธฃเธฅเธเนเธเธเนเธญเธเธงเธฒเธกเนเธ”เธขเนเธเน backticks (`)
+        out.push(`เธชเธงเธฑเธชเธ”เธต ${firstName}!`);
+        console.log(`เธชเธงเธฑเธชเธ”เธต ${firstName}!`);
+
+        // String Methods: เธงเธดเธเธตเธเธฒเธฃเธ•เนเธฒเธเน เนเธเธเธฒเธฃเธเธฑเธ”เธเธฒเธฃเธเนเธญเธเธงเธฒเธก
+        out.push("เธเธงเธฒเธกเธขเธฒเธง: " + text.length); // เธเธฑเธเธเธณเธเธงเธเธ•เธฑเธงเธญเธฑเธเธฉเธฃ
+        console.log("เธเธงเธฒเธกเธขเธฒเธง:", text.length);
+
+        out.push("เธ•เธฑเธงเนเธซเธเน: " + text.toUpperCase()); // เน€เธเธฅเธตเนเธขเธเน€เธเนเธเธ•เธฑเธงเธเธดเธกเธเนเนเธซเธเน (เธ–เนเธฒเธกเธตเธ เธฒเธฉเธฒเธญเธฑเธเธเธคเธฉ)
+        console.log("เธ•เธฑเธงเนเธซเธเน:", text.toUpperCase());
+
+        out.push("เธ•เธฑเธงเน€เธฅเนเธ: " + text.toLowerCase()); // เน€เธเธฅเธตเนเธขเธเน€เธเนเธเธ•เธฑเธงเธเธดเธกเธเนเน€เธฅเนเธ
+        console.log("เธ•เธฑเธงเน€เธฅเนเธ:", text.toLowerCase());
+
+        out.push('เธกเธต "Java"? ' + text.includes('Java')); // เธ•เธฃเธงเธเธชเธญเธเธงเนเธฒเธกเธตเธเธณเธ—เธตเนเธเนเธเธซเธฒเนเธซเธก (เธเธทเธเธเนเธฒ true/false)
+        console.log('เธกเธต "Java"?', text.includes('Java'));
+
+        out.push('เธ•เธณเนเธซเธเนเธ "Script": ' + text.indexOf('Script')); // เธซเธฒเธ•เธณเนเธซเธเนเธเน€เธฃเธดเนเธกเธ•เนเธเธเธญเธเธเธณ
+        console.log('เธ•เธณเนเธซเธเนเธ "Script":', text.indexOf('Script'));
+
+        out.push("เธ•เธฑเธ”เธเธณ (0-4): " + text.slice(0, 4)); // เธ•เธฑเธ”เธเนเธญเธเธงเธฒเธกเธ•เธฒเธกเธ•เธณเนเธซเธเนเธเธ—เธตเนเธฃเธฐเธเธธ
+        console.log("เธ•เธฑเธ”เธเธณ (0-4):", text.slice(0, 4));
+
+        out.push("เนเธ—เธเธ—เธตเน: " + text.replace('เน€เธเนเธ', 'เธชเธธเธ”เธขเธญเธ”')); // เนเธ—เธเธ—เธตเนเธเธณเน€เธเนเธฒเธ”เนเธงเธขเธเธณเนเธซเธกเน
+        console.log("เนเธ—เธเธ—เธตเน:", text.replace('เน€เธเนเธ', 'เธชเธธเธ”เธขเธญเธ”'));
+
+        // เนเธชเธ”เธเธเธฅเธเธเธซเธเนเธฒเน€เธงเนเธเธเนเธฒเธ element เธ—เธตเนเธกเธต id="output"
+        document.getElementById("output").textContent = out.join("\n");
+
+        // เนเธชเธ”เธเธเธฅเนเธ Console (F12)
+        console.clear();
+        out.forEach(line => console.log("> " + line));
+    }
+</script>
+</body>
+</html>

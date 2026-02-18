@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>Font Size Demo</title>
+
+<style>
+
+    /* Parent เธ—เธตเนเธเธงเธเธเธธเธกเธเธญเธเธ•เนเธ—เธฑเนเธเธซเธกเธ” */
+    .parent {
+        font-size: 16px; /* เธเนเธฒเน€เธฃเธดเนเธกเธ•เนเธ */
+        border: 2px solid #ccc;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    /* Child เนเธเน em โ’ เน€เธเธฅเธตเนเธขเธเธ•เธฒเธก parent */
+    .child-title {
+        font-size: 2em;   /* 2 ร— parent */
+        color: #c0392b;
+        font-weight: bold;
+    }
+
+    .child-text {
+        font-size: 1.2em; /* 1.2 ร— parent */
+        color: #2c3e50;
+    }
+
+    /* เธ•เธฑเธงเธญเธขเนเธฒเธเธ—เธตเนเนเธเน px โ’ เนเธกเนเธขเธทเธ”เธซเธขเธธเนเธ */
+    .fixed-text {
+        font-size: 18px;
+        color: #2980b9;
+    }
+</style>
+
+</head>
+
+<body>
+
+<h2>เธชเธฒเธเธดเธ• Font-size: Parent โ’ Child (em)</h2>
+
+<form id="fontForm">
+    <label>เนเธชเนเธเธเธฒเธ”เธเธญเธเธ•เน Parent (px): </label>
+    <input type="number" id="fontSizeInput" value="16" min="10" max="40">
+    <button type="submit">เธเธฃเธฑเธเธเธเธฒเธ”เธเธญเธเธ•เน</button>
+</form>
+
+<div class="parent" id="parentBox">
+    <p class="child-title">เธซเธฑเธงเธเนเธญเธซเธฅเธฑเธ (2em)</p>
+    <p class="child-text">เธเนเธญเธเธงเธฒเธกเธขเนเธญเธข (1.2em) โ’ เน€เธเธฅเธตเนเธขเธเธ•เธฒเธก Parent</p>
+    <p class="fixed-text">เธเนเธญเธเธงเธฒเธกเนเธเธ px (18px) โ’ เนเธกเนเน€เธเธฅเธตเนเธขเธ</p>
+</div>
+
+<script>
+    document.getElementById("fontForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+        const newSize = document.getElementById("fontSizeInput").value;
+        document.getElementById("parentBox").style.fontSize = newSize + "px";
+    });
+</script>
+
+</body>
+</html>

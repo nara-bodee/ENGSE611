@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="runDemo()">Run Code</button>
+
+<pre id="outputBox" style="background: #f4f4f4; padding: 10px; border-radius: 5px; min-height: 50px;"></pre>
+
+<script>
+    function runDemo() {
+        console.clear();
+        const output = [];
+
+        let a = 10; let b = 3;
+
+        // เธเธฒเธฃเนเธเน Arithmetic Operators
+        output.push("a + b = " + (a + b)); // เธเธงเธ
+        console.log("a + b =", a + b);
+
+        output.push("a % b = " + (a % b)); // Modulo (เธซเธฒเธฃเน€เธญเธฒเน€เธจเธฉ)
+        console.log("a % b =", a % b);
+
+        output.push("a ** b = " + (a ** b)); // Exponentiation (เธขเธเธเธณเธฅเธฑเธ)
+        console.log("a ** b =", a ** b);
+
+        // เธเธฒเธฃเนเธเน Math object เธชเธณเธซเธฃเธฑเธเธเธฑเธ”เธเธฒเธฃเธ•เธฑเธงเน€เธฅเธ
+        output.push("เธเธฑเธ”เน€เธจเธฉ 3.7: " + Math.round(3.7)); // เธเธฑเธ”เธ•เธฒเธกเธซเธฅเธฑเธเธเธ“เธดเธ•เธจเธฒเธชเธ•เธฃเน
+        console.log("เธเธฑเธ”เน€เธจเธฉ 3.7:", Math.round(3.7));
+
+        output.push("เธเธฑเธ”เธฅเธ 3.7: " + Math.floor(3.7)); // เธเธฑเธ”เธฅเธเน€เธชเธกเธญ
+        console.log("เธเธฑเธ”เธฅเธ 3.7:", Math.floor(3.7));
+
+        output.push("เธเธฑเธ”เธเธถเนเธ 3.2: " + Math.ceil(3.2)); // เธเธฑเธ”เธเธถเนเธเน€เธชเธกเธญ
+        console.log("เธเธฑเธ”เธเธถเนเธ 3.2:", Math.ceil(3.2));
+
+        let rand = Math.random(); // เธชเธธเนเธกเธ•เธฑเธงเน€เธฅเธเธฃเธฐเธซเธงเนเธฒเธ 0 เธ–เธถเธ 1
+        output.push("เธชเธธเนเธก 0-1: " + rand);
+        console.log("เธชเธธเนเธก 0-1:", rand);
+
+        // เธ•เธฑเธงเธญเธขเนเธฒเธเธเธฒเธฃเธเธฃเธฐเธขเธธเธเธ•เน: เธ—เธญเธขเธฅเธนเธเน€เธ•เนเธฒ
+        let dice = Math.floor(Math.random() * 6) + 1; // เธชเธธเนเธกเน€เธฅเธ 1-6
+        output.push("เธ—เธญเธขเธฅเธนเธเน€เธ•เนเธฒเนเธ”เน: " + dice);
+        console.log("เธ—เธญเธขเธฅเธนเธเน€เธ•เนเธฒเนเธ”เน:", dice);
+
+        // เนเธชเธ”เธเธเธฅเธเธเธซเธเนเธฒเน€เธงเนเธเธเนเธฒเธ element เธ—เธตเนเธกเธต id="outputBox"
+        document.getElementById("outputBox").textContent = output.join("\n");
+    }
+</script>
+</body>
+</html>

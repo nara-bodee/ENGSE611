@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="dayInput" placeholder="1-7" min="1" max="7">
+<button onclick="convertDay()">เนเธเธฅเธเธเนเธฒ</button>
+<div id="output">เธเธฅเธฅเธฑเธเธเนเธเธฐเนเธชเธ”เธเธ—เธตเนเธเธตเน...</div>
+
+<script>
+function convertDay() {
+    let day = Number(document.getElementById("dayInput").value);
+    let text = "";
+    
+    switch (day) {
+        case 1:
+            text = "เธงเธฑเธเธเธฑเธเธ—เธฃเน";
+            break;
+        case 2:
+            text = "เธงเธฑเธเธญเธฑเธเธเธฒเธฃ";
+            break;
+        case 3:
+            text = "เธงเธฑเธเธเธธเธ";
+            break;
+        case 4:
+            text = "เธงเธฑเธเธเธคเธซเธฑเธชเธเธ”เธต";
+            break;
+        case 5:
+            text = "เธงเธฑเธเธจเธธเธเธฃเน";
+            break;
+        case 6:
+            text = "เธงเธฑเธเน€เธชเธฒเธฃเน";
+            break;
+        case 7:
+            text = "เธงเธฑเธเธญเธฒเธ—เธดเธ•เธขเน";
+            break;
+        default:
+            text = "โ ๏ธ เธเธฃเธธเธ“เธฒเธเธฃเธญเธเน€เธฅเธ 1-7 เน€เธ—เนเธฒเธเธฑเนเธ";
+    }
+    
+    // เนเธชเธ”เธเธเธฅเธเธเธซเธเนเธฒเน€เธงเนเธ
+    document.getElementById("output").textContent = text;
+    // เนเธชเธ”เธเธเธฅเนเธ console
+    console.log("เน€เธฅเธเธ—เธตเนเธเธฃเธญเธ:", day);
+    console.log("เธเธทเนเธญเธงเธฑเธ:", text);
+}
+</script>
+</body>
+</html>

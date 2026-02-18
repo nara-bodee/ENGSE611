@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="runDemo()">Run Code</button>
+
+<pre id="outputBox" style="background: #f4f4f4; padding: 10px; border-radius: 5px; min-height: 50px;"></pre>
+
+<script>
+    function runDemo() {
+        // เธฅเนเธฒเธ Console เธ—เธธเธเธเธฃเธฑเนเธเธ—เธตเนเธฃเธฑเธ เน€เธเธทเนเธญเนเธกเนเนเธซเนเธชเธฑเธเธชเธเธเธฑเธเธเธฅเน€เธเนเธฒ
+        console.clear();
+        const output = [];
+
+        // เธ•เธฑเธงเธญเธขเนเธฒเธเธ•เธฑเธงเนเธเธฃ
+        let studentName = 'เธชเธกเธเธฒเธข';
+        let age = 20;
+        let isStudent = true;
+        const universityName = 'เธกเธซเธฒเธงเธดเธ—เธขเธฒเธฅเธฑเธขเน€เธ—เธเนเธเนเธฅเธขเธต';
+
+        // เนเธชเธ”เธเธเนเธฒเธ•เธฑเธงเนเธเธฃเน€เธฃเธดเนเธกเธ•เนเธ
+        output.push("เธเธทเนเธญ: " + studentName);
+        console.log("เธเธทเนเธญ:", studentName);
+        output.push("เธญเธฒเธขเธธ: " + age);
+        console.log("เธญเธฒเธขเธธ:", age);
+
+        // เน€เธเธฅเธตเนเธขเธเธเนเธฒ let
+        age = 21;
+        output.push("เธญเธฒเธขเธธเนเธซเธกเน: " + age);
+        console.log("เธญเธฒเธขเธธเนเธซเธกเน:", age);
+
+        // เน€เธเธฅเธตเนเธขเธเธเนเธฒ const (เธเธฐ error เนเธ•เนเธ–เธนเธเธเธฑเธเนเธ catch)
+        try {
+            universityName = 'เธกเธซเธฒเธงเธดเธ—เธขเธฒเธฅเธฑเธขเนเธซเธกเน'; // เธ—เธณเนเธซเนเน€เธเธดเธ” TypeError
+        } catch (e) {
+            output.push("Error: " + e.message);
+            console.error(e.message); // เนเธชเธ”เธเนเธ Console เน€เธเนเธเธชเธตเนเธ”เธ
+        }
+
+        // เนเธชเธ”เธเธเธฅเธเธเธซเธเนเธฒเน€เธงเนเธ
+        document.getElementById("outputBox").textContent = output.join("\n");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .block-example div {
+            display: block;
+            padding: 10px;
+            margin-bottom: 5px;
+            background: #c8e6ff;
+        }
+        .inline-example span {
+            display: inline;
+            padding: 5px;
+            margin-right: 5px;
+            background: #ffc8c8;
+        }
+        .inline-block-example div {
+            display: inline-block;
+            width: 120px;
+            height: 40px;
+            margin-right: 10px;
+            background: #d2ffd2;
+            text-align: center;
+            line-height: 40px;
+            border: 1px solid #4caf50
+        }
+        .box {
+            padding:10px;
+            margin: 10px 0;
+            background-color: #a0d8ff;
+            border: 2px solid #0077aa;
+            font-size: 20px;
+        }
+        .none {
+            display: none;
+        }
+        .hidden {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <h2>display: block</h2>
+
+    <h3>เธเธดเธเธเธทเนเธเธ—เธตเนเน€เธ•เนเธกเธเธฃเธฃเธ—เธฑเธ”</h3>
+    <div class="block-example">
+        <div>Block 1</div>
+        <div>Block 2</div>
+    </div>
+
+    <h3>เธญเธขเธนเนเนเธเธเธฃเธฃเธ—เธฑเธ”เน€เธ”เธตเธขเธงเธเธฑเธ เนเธ—เนเธชเธฒเธกเธฒเธฃเธ–เธเธณเธซเธเธ” width height</h3>
+    <div class="inline-example">
+        <span>Inline 1</span>
+        <span>Inline 2 Inline 2</span>
+        <span>Inline 3</span>
+    </div>
+
+    <h3>เธฃเธงเธกเธเนเธญเธ”เธตเธเธญเธ block เนเธฅเธฐ inline</h3>
+    <div class="inline-block-example">
+        <div>BoxA</div>
+        <div>BoxB BoxB</div>
+        <div>BoxC</div>
+    </div>
+    <br><br>
+    <h2>เนเธชเธ”เธเธเธฅเธเธเธ•เธด</h2>
+    <div class="box">Box 1 (เธเธเธ•เธด)</div>
+
+    <h2>display: none; -> เธซเธฒเธขเนเธเธเธฒเธเธซเธเนเธฒเน€เธงเนเธ</h2>
+    <div class="box none">Box 2 (display:none เธซเธฒเธขเนเธ)</div>
+    <div class="box">Box 3 (เธเธฐเธเธดเธ”เธเธถเนเธเธกเธฒเธ—เธฑเธเธ—เธตเน€เธเธฃเธฒเธฐ Box 2 เธซเธฒเธขเนเธ)</div>
+
+    <h2>visibility: hidden; -> เธเนเธญเธเน€เธเธทเนเธญเธซเธฒเนเธ•เนเธขเธฑเธเธเธเธเธทเนเธเธ—เธตเน</h2>
+    <div class="box hidden">Box 4 (visibility:hidden เธเนเธญเธเน€เธเธทเนเธญเธซเธฒเนเธ•เนเธขเธฑเธเธเธเธเธทเนเธเธ—เธตเน)</div>
+    <div class="box">Box 5 (เธเธฐเนเธกเนเธเธดเธ”เธเธถเนเธเธกเธฒ เน€เธเธฃเธฒเธฐ Box 4 เธขเธฑเธเธเธเธเธทเนเธเธ—เธตเนเธญเธขเธนเน)</div>
+</body>
+</html>
