@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>โปรแกรมคำนวณเกรด</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        #outputBox { 
+            margin-top: 10px; 
+            padding: 10px; 
+            background-color: #000; 
+            color: #fff; 
+            border-radius: 5px;
+            min-height: 40px;
+            white-space: pre-line; /* เพื่อให้ขึ้นบรรทัดใหม่ตาม \n */
+        }
+    </style>
+</head>
+<body>
+
+    <h2>ฟังก์ชันคำนวณเกรด (Calculate Grade)</h2>
+
+    <p><b>กรอกคะแนน:</b></p>
+    <input type="number" id="scoreInput" placeholder="0 - 100">
+    <button onclick="runGrade()">คำนวณเกรด</button>
+    <br><br>
+    <div id="outputBox">ผลลัพธ์จะปรากฏที่นี่...</div>
+
+    <script>
+        // ส่วนที่ 2 - ฟังก์ชันคำนวณเกรด (Logic)
+        function calculateGrade(score) {
+            if (score >= 80) {
+                return "A";
+            } else if (score >= 70) {
+                return "B";
+            } else if (score >= 60) {
+                return "C";
+            } else if (score >= 50) {
+                return "D";
+            } else {
+                return "F";
+            }
+        }
+
+        // ส่วนที่ 3 - ฟังก์ชันรับค่าและแสดงผล
+        function runGrade() {
+            const output = [];
+            let score = Number(document.getElementById("scoreInput").value);
+
+            // ตรวจค่าว่างหรือค่าที่ผิดเงื่อนไข
+            if (isNaN(score) || score < 0 || score > 100 || document.getElementById("scoreInput").value === "") {
+                output.push("⚠️ กรุณากรอกคะแนน 0-100");
+                document.getElementById("outputBox").textContent = output.join("\n");
+                return;
+            }
+
+            let grade = calculateGrade(score);
+
+            output.push("คะแนน: " + score);
+            output.push("เกรดที่ได้: " + grade);
+
+            // แสดงผลใน Console (ตามภาพส่วนที่ 3)
+            console.log("คะแนน:", score);
+            console.log("เกรด:", grade);
+
+            // แสดงผลบนหน้าเว็บ
+            document.getElementById("outputBox").textContent = output.join("\n");
+        }
+    </script>
+
+</body>
+</html>
